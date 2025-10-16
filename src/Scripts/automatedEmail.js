@@ -6,14 +6,7 @@ const fs = require('fs');
 
 const email = JSON.parse(fs.readFileSync('C:/xampp/htdocs/SportsMS/src/Data/emailconfig.json', 'utf8'));
 
-async function sendMail() {
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    }
-  });
+
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
